@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  username: root
+  password: root
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/mobile_services_development
+
+
+test:
+  <<: *default
+  database: db/mobile_services_test
+
+production:
+  <<: *default
+  database: db/mobile_services_production
